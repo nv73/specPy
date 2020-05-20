@@ -9,6 +9,7 @@ from PIL import Image, ImageQt
 from matplotlib.backends.backend_qt4agg import FigureCanvasQTAgg as FigureCanvasQt
 from matplotlib.figure import Figure
 from matplotlib import pyplot as plt
+from sklearn.cluster import KMeans as kmeans
 
 #System
 import sys
@@ -56,7 +57,7 @@ class specPy_Form(QtGui.QMainWindow, specPy_ui.Ui_specPy):
         
         self.hsGeo = {}
 
-        isEmpty = True
+        self.isEmpty = True
         
 
     #Change the class variable responsible for which band is being displayed in the GUI
@@ -120,6 +121,22 @@ class specPy_Form(QtGui.QMainWindow, specPy_ui.Ui_specPy):
         hsArray = np.reshape(hsArray, (x,y))
 
         self.drawArea.display_Image_From_Array(hsArray, True)
+        
+    def hsi_array_to_df(self, inputArr):
+        
+        x, y, z = inputArr.shape
+        
+        arr_preproc = np.column_stack((np.repeat(np.arange(x),y),inputArr.reshape(x*y, -1)))
+
+        return(pd.DataFrame(arr_preproc))
+        
+    def build_kmeans(self, hsi_df, cluster=8):
+        
+        model = kmeans(n_clusters= cluster)
+        
+        model.fit(hsi_df)
+        
+        return(model)
 
 class canvas(QtGui.QGraphicsView):
 
@@ -271,6 +288,8 @@ class canvas(QtGui.QGraphicsView):
         self.enable_Drag()
 
         self.empty = False
+        
+
         
     def normalize(self, inputArr):
 
