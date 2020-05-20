@@ -227,7 +227,7 @@ class geoCanvas(QtWidgets.QGraphicsView):
     #Load a geoimage in gdal format into a dictionary
     #Using the dictionary allows for multiple rasters to be loaded at once
     #Currently loading them directly into memory which will be a limiting factor.        
-    def ImportGeoImage(self, geoImagePath=None):
+    def importGeoImage(self, geoImagePath=None):
         
         if geoImagePath == None:
             

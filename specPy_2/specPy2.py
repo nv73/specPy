@@ -46,9 +46,9 @@ class specPy2_Form(QtWidgets.QMainWindow, specPy2_ui.Ui_specPy):
         x,y,z = hsi_slice.shape
         hsi_slice = np.reshape(hsi_slice, (x,y))
         
-        #self.geoCanvas.displayArray(hsi_slice)
+        self.geoCanvas.displayArray(hsi_slice)
         
-        self.geoCanvas.importGeoImage('cea.tif')
+        #self.geoCanvas.importGeoImage('cea.tif')
         
     def load_hsi(self, file, header):
         
