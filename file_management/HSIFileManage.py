@@ -147,7 +147,7 @@ class manage_Hsi(QtWidgets.QMainWindow, HSIFileView_ui.Ui_MainWindow):
         
         os.chdir(self.session_folder)
         
-        for file in ['CAL', 'NAV', 'DEM', 'OUTPUT']:
+        for file in ['CAL', 'NAV', 'DEM', 'OUTPUT', 'OPT']:
             
             os.mkdir(file)
         
