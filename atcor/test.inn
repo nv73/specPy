@@ -1,0 +1,36 @@
+20-04-16          Date (dd-mm-year) 
+ 100.0              Scale factor reflectance
+   2.00             Pixel size [m]          
+FENIX, FENIX,
+     1.00000        gainset,  c1 = c1(calfile) / gainset
+D:\Hyperspectral\D107_PlaceGlacier\sess1\OUTPUT\2020-04-16_18-02-09_test_rad.cal
+D:\Hyperspectral\D107_PlaceGlacier\sess1\OUTPUT\2020-04-16_18-02-09_test-rect_sca.bsq
+0.9900  0           iemiss, dem_unit  (0=[m], 1=[dm], 2=[cm])
+2020-04-16_18-02-09_test-rect_img_ele.bsq
+2020-04-16_18-02-09_test-rect_img_slp.bsq
+2020-04-16_18-02-09_test-rect_img_asp.bsq
+2020-04-16_18-02-09_test-rect_img_sky.bsq
+
+h04000_wv20_rura.atm
+
+ 0.600              Adjacency range [km]
+  50.0              Visibility [km]
+ 1.859              Mean ground elevation [km]
+ 41.1   154.9       Solar zenith, azimuth [degree]
+  3.556 325.869     Flight altit [km], heading[deg]
+   0   1   0   0   0   1   0     npref, iwaterwv, ihaze, iwat_shd, ksolflux, ishadow, icl_shadow
+   0   0.500   0.500         itriang, ratio_red_nir/swir, ratio_blue_red
+   2    40.0    0.200            ibrdf, beta_thr, thr_g
+   1   0.820   0.780   0.600     lai_model, a0_vi, a1_vi, a2_vi
+       0.900   0.950   0.380     FPAR model: C, A, B
+        20.0   0.830             t_air, emiss_air   (flat terrain)
+ 20.0  0.50 0.65 15.0  6.3       t_air, z0_ref, tgradient, p_wv, zh_pwv  (rugged terrain)
+   2   2                         ihot_mask, ihot_dynr
+  2 -999.00 -999.00   0.10   1   iclshad_mask, thr_shad, phi_unscl_max, phi_scl_min, istretch_type
+   60   62   65   66   69   71   bands for  940 nm water vapor retrieval
+    0    0    0    0    0    0   bands for 1130 nm water vapor retrieval
+    0    0    0    0             bands for thermal water vapor retrieval (night data)
+  0.990  0.980  0.975  0.965     e_water, e_veget, e_soil, e_sand (ANEM emissivities)
+     0              iwv_model (1=wv without regression, 2=regression with several bands)
+     0              icirrus 
+     0              irrad0  (1=solar flux at ground, 2=+surface reflected radiance)
